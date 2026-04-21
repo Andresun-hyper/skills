@@ -1,0 +1,16 @@
+{
+  "name": "web-demo-video-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-only web demo recording and promo video rendering for Codex-compatible skills.",
+  "scripts": {
+    "install:browsers": "npx playwright install chromium",
+    "record": "node scripts/record-scenes.mjs --scenario ./templates/scenario.example.json",
+    "render": "node scripts/render-promo.mjs --config ./templates/render.example.json",
+    "make": "npm run record && npm run render"
+  },
+  "dependencies": {
+    "playwright": "^1.54.0"
+  }
+}
